@@ -1,0 +1,30 @@
+{
+  "name": "backup-firestore",
+  "version": "1.0.0",
+  "description": "backup and restore collections using json files",
+  "main": "index.js",
+  "scripts": {
+    "start": "clear & node index",
+    "lint": "eslint '**/*.js' --ignore-pattern node_modules/",
+    "backup": "node backup-firestore",
+    "restore": "node restore-firestore",
+    "delete": "firebase --project flightwith-80e39 firestore:delete --yes --recursive tickets",
+    "drop": "firebase --project flightwith-80e39 firestore:delete --yes --all-collections"
+  },
+  "author": "Roberto Miguez De Freitas",
+  "license": "ISC",
+  "dependencies": {
+    "elint": "^1.11.1",
+    "firebase-admin": "^8.6.0",
+    "inquirer": "^7.0.4",
+    "util.promisify": "^1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0"
+  }
+}
